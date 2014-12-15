@@ -185,15 +185,6 @@ var RendererFull = function(slideFactory) {
 
           slide.element.css(this.TRANSFORM_PROP, 'translate(' + i * 100 + '%' + ', 0)');
 
-            var positions = ['previous', 'current', 'next'];
-            for(var index = 0; i < 3; i++) {
-                if(index - 1 == position) {
-                    slide.element.addClass(positions[index]);
-                } else {
-                    slide.element.removeClass(positions[index]);
-                }
-            }
-
         };
       }
     },
@@ -253,12 +244,12 @@ var RendererPart = function(slideFactory) {
         slide.element.css(this.TRANSFORM_PROP, 'translate(' + position * 100 + '%' + ', 0)');
 
         var positions = ['previous', 'current', 'next'];
-        for(var index = 0; i < 3; i++) {
-            if(index - 1 == position) {
-                slide.element.addClass(positions[index]);
-            } else {
-                slide.element.removeClass(positions[index]);
-            }
+        for(var index = 0; index < 3; index++) {
+          if(index - 1 == position) {
+            slide.element.addClass(positions[index]);
+          } else {
+            slide.element.removeClass(positions[index]);
+          }
         }
       }
     },
