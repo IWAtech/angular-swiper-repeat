@@ -120,7 +120,7 @@ var Renderer = function(retranslatorFn) {
     },
 
     transition: function(offset, callback) {
-      this.translate(offset, 500, callback);
+      this.translate(offset, 300, callback);
     },
 
     isInTransition: function() {
